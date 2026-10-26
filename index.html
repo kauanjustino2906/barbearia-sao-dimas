@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171819">
+<title>Barbearia Colombo | Unidade São Dimas</title>
+<style>
+:root{--bg:#171819;--panel:#f8f8f8;--red:#bd302b;--red2:#8f2422;--gold:#d8b64e;--text:#fff;--muted:#bfc0c1}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#343638 0%,#202122 42%,#111213 100%);color:var(--text);font-family:Arial,Helvetica,sans-serif;min-height:100vh}
+.page{width:min(100%,480px);margin:0 auto;padding:26px 19px 32px}
+.brand{display:flex;justify-content:center;margin:4px auto 19px}
+.logo{width:148px;height:148px;border-radius:50%;border:2px solid #555;background:#090909;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.logo img{width:100%;height:100%;object-fit:contain}
+.logo-fallback{font-weight:900;text-align:center;font-size:14px;line-height:1.25;letter-spacing:1px}
+.subtitle{text-align:center;color:#c9c9c9;font-size:13px;letter-spacing:2px;text-transform:uppercase;margin:0 0 22px}
+.share-wrap{text-align:center;margin:0 0 23px}
+.share{border:1px solid #aaa;background:transparent;color:#fff;border-radius:30px;padding:11px 24px;font-size:14px;font-weight:700;cursor:pointer}
+.links{display:grid;gap:12px}
+.link{display:flex;align-items:center;gap:17px;min-height:69px;padding:15px 21px;border:1px solid #454647;border-radius:18px;background:linear-gradient(110deg,#333536,#242526);color:white;text-decoration:none;font-size:17px;font-weight:600;box-shadow:0 5px 15px #0004}
+.link:active,.action:active{transform:scale(.985)}
+.icon{width:30px;min-width:30px;height:30px;display:grid;place-items:center;color:#e3c15b}
+.icon svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.g{font-size:30px;font-weight:800;font-family:Arial;color:#e3c15b}
+.panel{background:#f4f4f4;color:#202122;border-radius:20px;padding:22px 18px;margin-top:16px;box-shadow:0 8px 22px #0004}
+.panel h2{font-size:23px;margin:0 0 17px;display:flex;align-items:center;justify-content:center;gap:10px}
+.panel h2 svg{width:29px;height:29px;stroke:#222;fill:none;stroke-width:2.4}
+.info{text-align:center;font-size:14px;color:#555;line-height:1.45;margin:0 0 14px}
+.key{background:#fff;border:1px solid #ddd;border-radius:14px;padding:13px;text-align:center;font-weight:700;font-size:17px;overflow-wrap:anywhere}
+.action{display:block;width:100%;border:0;border-radius:14px;background:linear-gradient(110deg,#a92624,#ce3931);color:white;font-size:16px;font-weight:700;padding:15px;margin-top:12px;cursor:pointer}
+.location{display:block;text-decoration:none;color:#252525;background:#fff;border:1px solid #ddd;border-radius:14px;padding:15px;text-align:center;font-weight:700;line-height:1.45}
+.small{font-size:12px;color:#777;font-weight:400;display:block;margin-top:4px}
+.wifi-box{background:#fff;border:1px solid #e1e1e1;border-radius:15px;padding:17px 12px;text-align:center}
+.label{font-size:13px;color:#777;margin:0 0 5px}
+.value{font-size:17px;font-weight:700;overflow-wrap:anywhere;margin:0 0 13px}
+.value:last-child{margin-bottom:0}
+.qr-note{text-align:center;font-size:12px;color:#777;margin:10px 0 0}
+.wifi-qr{display:block;width:min(100%,260px);height:auto;margin:16px auto 8px;border-radius:4px;background:#fff;padding:10px}
+footer{text-align:center;color:#9b9b9b;font-size:12px;margin-top:22px;line-height:1.5}
+.social-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.social-card{text-align:center;background:#fff;border-radius:14px;padding:12px 8px}.social-card img{display:block;width:min(100%,160px);height:auto;margin:0 auto;border-radius:8px}.social-card p{margin:9px 0 0;font-size:13px;color:#666;line-height:1.4}.social-card strong{color:#222}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#f6f6f6;color:#111;padding:12px 18px;border-radius:30px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;box-shadow:0 5px 20px #0005;white-space:nowrap}
+.toast.show{opacity:1}
+@media(min-width:520px){body{padding:18px 0}.page{border:1px solid #383838;border-radius:28px}}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="brand">
+    <div class="logo"><img src="assets/logo-barbearia-colombo.jpg" alt="Logo Barbearia Colombo" style="width:100%;height:100%;object-fit:contain"></div>
+  </div>
+  <p class="subtitle">Unidade São Dimas • Colombo</p>
+  <div class="share-wrap"><button class="share" onclick="sharePage()">↗ &nbsp; Compartilhar</button></div>
+
+  <nav class="links" aria-label="Links principais">
+    <a class="link" href="https://search.google.com/local/writereview?placeid=ChIJazhBlq7p3JQRuGYKNOZCEyI" target="_blank" rel="noopener"><span class="icon g">G</span><span>Avalie no Google</span></a>
+    <a class="link" href="https://www.instagram.com/barbearia_colombo/" target="_blank" rel="noopener"><span class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></span><span>Instagram · @barbearia_colombo</span></a>
+    <a class="link" href="https://wa.me/5541988598333" target="_blank" rel="noopener"><span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.1-4.8a8.2 8.2 0 1 1 16.1-3.5Z"/><path d="M8.1 7.8c.2-.5.5-.6.9-.6h.5c.2 0 .4.1.5.4l.8 1.9c.1.2.1.4-.1.6l-.6.8c-.2.2-.2.4 0 .7.5.9 1.3 1.7 2.2 2.2.3.2.5.2.7-.1l.8-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.3.4.5 0 .4-.2 1.1-.6 1.5-.5.5-1.2.7-1.9.6-1.1-.2-2.5-.8-3.8-2-1.5-1.3-2.4-2.9-2.7-4-.2-.8 0-1.6.5-2.4Z"/></svg></span><span>WhatsApp</span></a>
+    <a class="link" href="https://www.google.com/maps/search/?api=1&query=Rua+Presidente+Faria+63+Sao+Dimas+Colombo+PR" target="_blank" rel="noopener"><span class="icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span>Como chegar · São Dimas</span></a>
+  </nav>
+
+  <section class="panel">
+    <h2>▦ &nbsp; Pix</h2>
+    <p class="info"><strong>Pague com Pix</strong><br>Barbearia Colombo · Unidade São Dimas</p>
+    <div class="key" id="pixKey">41998714767</div>
+    <button class="action" onclick="copyText('pixKey','Chave Pix copiada!')">▧ &nbsp; Copiar chave Pix</button>
+  </section>
+
+  <section class="panel">
+    <h2><svg viewBox="0 0 24 24"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12a10 10 0 0 1 13 0M9 15.5a5 5 0 0 1 6 0"/><path d="M12 20h.01"/></svg> Wi-Fi grátis</h2>
+    <div class="wifi-box">
+      <p class="label">Rede</p><p class="value" id="wifiName">TIM_ULTRAFIBRA_8B89</p>
+      <p class="label">Senha</p><p class="value" id="wifiPassword">95fkcFz47P</p>
+    </div>
+    <p class="qr-note">Conecte-se à rede Wi-Fi da unidade São Dimas.</p>
+    <img class="wifi-qr" src="assets/wifi-sao-dimas.png" alt="QR code para conectar ao Wi-Fi da unidade São Dimas">
+    <button class="action" onclick="copyWifi()">⌁ &nbsp; Copiar senha do Wi-Fi</button>
+  </section>
+
+  <section class="panel">
+    <h2>Instagram e WhatsApp</h2>
+    <div class="social-grid">
+      <div class="social-card">
+        <img src="assets/instagram-qr.png" alt="QR code do Instagram @barbearia_colombo">
+        <p>Instagram<br><strong>@barbearia_colombo</strong></p>
+      </div>
+      <div class="social-card">
+        <img src="assets/whatsapp-qr.png" alt="QR code do WhatsApp da unidade São Dimas">
+        <p>WhatsApp<br><strong>Fale com a unidade</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> Nossa localização</h2>
+    <a class="location" href="https://www.google.com/maps/search/?api=1&query=Rua+Presidente+Faria+63+Sao+Dimas+Colombo+PR" target="_blank" rel="noopener">Rua Presidente Faria, 63<br>São Dimas — Colombo/PR<span class="small">Toque para abrir no Google Maps</span></a>
+  </section>
+  <footer>BARBEARIAS COLOMBO<br>Unidade São Dimas • Site demonstrativo</footer>
+</main>
+<div class="toast" id="toast">Copiado!</div>
+<script>
+function notify(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
+async function copyText(id,msg){const value=document.getElementById(id).textContent.trim();try{await navigator.clipboard.writeText(value);notify(msg)}catch(e){const a=document.createElement('textarea');a.value=value;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();notify(msg)}}
+async function copyWifi(){const value=document.getElementById('wifiPassword').textContent.trim();try{await navigator.clipboard.writeText(value);notify('Senha do Wi-Fi copiada!')}catch(e){const a=document.createElement('textarea');a.value=value;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();notify('Senha do Wi-Fi copiada!')}}
+async function sharePage(){if(navigator.share){try{await navigator.share({title:document.title,text:'Barbearia Colombo — Unidade São Dimas',url:location.href})}catch(e){}}else{try{await navigator.clipboard.writeText(location.href);notify('Link copiado!')}catch(e){notify('Copie o endereço do navegador para compartilhar.')}}}
+</script>
+</body>
+</html>
